@@ -82,7 +82,7 @@ function App() {
             <header>
               <div className="left">
                 <div className="logo">
-                  <img src="/public/img/logo.png" alt="" />
+                  <img src="/img/logo.png" alt="" />
                 </div>
                 <div className="center">
                 <a href="#">Каталог</a>
@@ -95,13 +95,13 @@ function App() {
 
             <div className="right">
               <button>
-                <img src="/public/img/like.png" alt="" />
+                <img src="/img/like.png" alt="" />
               </button>
               <button>
-                <img src="/public/img/user (12) 1.png" alt="" />
+                <img src="/img/user (12) 1.png" alt="" />
               </button>
               <button>
-                <img src="/public/img/shopping-cart (6) 1.png" alt="" />
+                <img src="/img/shopping-cart (6) 1.png" alt="" />
               </button>
             </div>
           </header>
@@ -123,11 +123,11 @@ function App() {
             </div>
             <div className="icons">
               <div className="tire"></div>
-              <img src="/public/img/mouse (2) 1.png" alt="" />
+              <img src="/img/mouse (2) 1.png" alt="" />
             </div>
             <div className="relative">
-              <img className='point' src="/public/img/Group 209.png" alt="" />
-              <img className='point2' src="/public/img/Group 211.png" alt="" />
+              <img className='point' src="/img/Group 209.png" alt="" />
+              <img className='point2' src="/img/Group 211.png" alt="" />
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@ function App() {
             <span>Для эфирных масел</span>
           </div> */}
         </div>
-        {/* <img src="/public/img/Mask Group (6).png" alt="" /> */}
+        {/* <img src="/img/Mask Group (6).png" alt="" /> */}
       </div>
       <section className='promo'>
         <div className="wrap2">
@@ -193,15 +193,15 @@ function App() {
       <section className='promo3'>
         <div className="wrap2">
           <div className="left-cont">
-           <img src="/public/img/1 + 1 = 3@2x.png" alt="" />
+           <img src="/img/1 + 1 = 3@2x.png" alt="" />
            <h3>Закажите два товара и получите третий бесплатно</h3>
            <button>Перейти в каталог</button>
           </div>
           <div className="right-cont">
-            <img className='one' src="/public/img/Mask Group (12).png" alt="" />
-            <img className='two' src="/public/img/Group 44 (1).png" alt="" />
-            <img className='three' src="/public/img/Group 1.png" alt="" />
-            <img className='four' src="/public/img/COPPER PRO.png" alt="" />
+            <img className='one' src="/img/Mask Group (12).png" alt="" />
+            <img className='two' src="/img/Group 44 (1).png" alt="" />
+            <img className='three' src="/img/Group 1.png" alt="" />
+            <img className='four' src="/img/COPPER PRO.png" alt="" />
           </div>
         </div>
       </section>
@@ -267,7 +267,7 @@ function App() {
           <div className="footer">
             <div className="left">
               <div className="logo">
-                <img src="/public/img/logo.png" alt="" />
+                <img src="/img/logo.png" alt="" />
               </div>
               <div className="texts">
                 <h5>© 2021 “Copper Pro”
@@ -301,9 +301,9 @@ function App() {
                 <a href="">+38 (096) 990 67 56</a>
                 <a href="">a.alambik@gmail.com</a>
                 <div className="icons">
-                  <img src="/public/img/_x30_4.Twitter.png" alt="" />
-                  <img src="/public/img/_x30_1._Facebook.png" alt="" />
-                  <img src="/public/img/Group 83.png" alt="" />
+                  <img src="/img/_x30_4.Twitter.png" alt="" />
+                  <img src="/img/_x30_1._Facebook.png" alt="" />
+                  <img src="/img/Group 83.png" alt="" />
                 </div>
               </div>
             </div>
