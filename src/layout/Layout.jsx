@@ -58,7 +58,7 @@ const Layout = ({ children }) => {
                         </div>
                     </div>
                 </div>
-
+                
             </section>
             {children}
 

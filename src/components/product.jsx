@@ -4,7 +4,9 @@ function Product2({ item }) {
     
     return (
         <div className="item_box">
-        <div className="item">
+        <div className="item"   style={{
+                backgroundImage: `url("${item.image}")`
+            }}>
           <button>
             <img src="/img/Union.png" alt="" />
           </button>

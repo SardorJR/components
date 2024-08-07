@@ -12,61 +12,83 @@ import Layout from './layout/Layout'
 function App() {
   const products = [
     {
-      img: '/img/image 12.png',
+      id: 1,
+      image: '/img/image 12.png',
       title: 'Для эфирных масел'
 
     },
     {
-      img: '/img/image 9.png',
+      id: 2,
+      image: '/img/image 9.png',
       title: 'Для гидролатов'
     },
     {
-      img: '/img/image 10.png',
+      id: 3,
+      image: '/img/image 10.png',
       title: 'Медная посуда'
     },
     {
-      img: '/img/image 14.png',
+      id: 4,
+      image: '/img/image 14.png',
       title: ' Аксессуары из меди'
     },
     {
-      img: '/img/Снимок экрана 2021-11-04 в 17.13 1.png',
+      id: 5,
+      image: '/img/Снимок экрана 2021-11-04 в 17.13 1.png',
       title: 'Индивидуальный заказ'
     },
     {
-      img: '/img/Снимок экрана 2024-08-04 172850.png',
+      id: 6,
+      image: '/img/S517768bcc2ad41139a4ed39478002195H.jpg_480x480.webp',
       title: 'Скидки и предложения'
     }
   ]
   const arr = [
     {
+      id: 1,
+      img:'/img/star (2) 1 (1).png',
       title: "Аутентичность",
       description: "Наши изделия из меди являются очень практичными и наполнят особой магией ваш дом или рабочее пространство."
     },
     {
+      id: 2,
+      img:'/img/eye (1) 1.png',
       title: "Изысканность",
-      description: "Медное перегонное оборудование используется для получения эфирных масел с незапамятных времен. Мы стремимся предоставить лучший товар по лучшей цене."
+      description: "Медное перегонное оборудование используется для получения эфирных масел с незапамятных времен."
     },
     {
+      id: 3,
+      img:'/img/041---Raise-Money.png',
       title: "Честная оплата",
-      description: "Мы стремимся предоставить лучший товар по лучшей цене с сервисом высокого уровня. Все начинается с честной оплаты."
+      description: "Мы стремимся предоставить лучший товар по лучшей цене с сервисом высокого уровня. Все начинается с ..."
     },
     {
+      id: 4,
+      img:'/img/flask 1.png',
       title: "Большой ассортимент",
-      description: "У нас есть все от миниатюрных настольных паровых дистилляторов эфирных масел до крупногабаритного оборудования."
+      description: "У нас есть все от миниатюрных настольных паровых дистилляторов эфирных масел до  оборудования."
     },
     {
+      id: 5,
+      img:'/img/hands 1.png',
       title: "Доставка по всему миру",
       description: "Вы можете получить нашу продукцию в кратчайшие сроки в любую точку земного шара."
     },
     {
+      id: 6,
+      img:'/img/Page-1.png',
       title: "Гарантия качества",
       description: "Наше оборудование производится вручную и проходит постоянный контроль качества."
     },
     {
+      id: 7,
+      img:'/img/potion 1.png',
       title: "Удобство в использовании",
       description: "Наши изделия из меди имеют уникальный дизайн, который обеспечивает максимальное удобство в использовании."
     },
     {
+      id: 8,
+      img:'/img/Group (8).png',
       title: "Забота об окружающей среде",
       description: "От 2 до 5% от стоимости каждого приобретенного товара мы направляем на защиту окружающей среды."
     }
@@ -136,7 +158,8 @@ function App() {
       <div className="wrap2">
         <h2>НАША ПРОДУКЦИЯ</h2>
         <div className="grid">
-          {products.map(item => <Product item={item} />)}
+          {products.map(item => <Product key={item.id}  item={item} />)}
+      
           {/* <div className="item">
             <span>Для эфирных масел</span>
           </div>
@@ -162,7 +185,7 @@ function App() {
         <div className="wrap2">
           <h1>ЛУЧШИЕ ПРОДАЖИ</h1>
           <div className="grid">
-            {products.slice(0, 3).map(item => <Product2 item={item} />)}
+            {products.slice(0, 3).map(item => <Product2 key={item.id}  item={item} />)}
           </div>
           <div className="colors">
             <button></button>
@@ -178,7 +201,7 @@ function App() {
         <div className="wrap2">
           <h1>НОВИНКИ</h1>
           <div className="grid">
-            {products.slice(0, 3).map(item => <Product2 item={item} />)}
+            {products.slice(0, 3).map(item => <Product2 key={item.id}  item={item} />)}
           </div>
           <div className="colors">
             <button></button>
@@ -211,7 +234,7 @@ function App() {
         <div className="wrap2">
           <h1>МЫ РЕКОМЕНДУЕМ</h1>
           <div className="grid">
-            {products.slice(0, 3).map(item => <Product2 item={item} />)}
+            {products.slice(0, 3).map(item => <Product2 key={item.id}  item={item} />)}
           </div>
           <div className="colors">
             <button></button>
@@ -227,7 +250,7 @@ function App() {
         <div className="wrap2">
           <h1>СКИДКИ</h1>
           <div className="grid">
-            {products.slice(0, 3).map(item => <ProductSale item={item} />)}
+            {products.slice(0, 3).map(item => <ProductSale key={item.id}  item={item} />)}
           </div>
           <div className="colors">
             <button></button>
@@ -243,7 +266,7 @@ function App() {
         <div className="wrap2">
           <h1>ЧТО ДУМАЮТ О НАС</h1>
           <div className="people">
-            {products.slice(0, 3).map(item => <PeopleThink item={item} />)}
+            {products.slice(0, 3).map(item => <PeopleThink key={item.id}  item={item} />)}
           </div>
           <div className="colors">
             <button></button>
@@ -256,7 +279,7 @@ function App() {
         <div className="wrap2">
           <h1>Почему выбирают нас</h1>
           <div className="choose-box">
-            {arr.slice(0, 8).map(item => <Choose item={item} />)}
+            {arr.slice(0, 8).map(item => <Choose key={item.id}  item={item} />)}
 
           </div>
         </div>

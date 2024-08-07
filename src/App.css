@@ -21,6 +21,7 @@ a {
   background-repeat: no-repeat;
   background-position: right;
 
+
   .wrap {
     width: 1300px;
     margin: 0 auto;
@@ -61,36 +62,37 @@ a {
             font-weight: 600;
             color: #FFFFFF;
             text-align: center;
-            position: relative; 
-            display: inline-block; 
-            text-decoration: none; 
-            padding: 1px 0; 
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+
+            cursor: pointer;
           }
-      
+
           .link::after {
             content: '';
             position: absolute;
-            bottom: 0px; 
-            left: 0; 
-            width: 0; 
-            height: 2px; 
+            bottom: 0px;
+            left: 0;
+            width: 0;
+            height: 1px;
             background: linear-gradient(92.09deg, #f7591070 -79.4%, #e4a26f71 84.12%);
-           
-            border-radius: 50px; 
-            transition: width 0.3s ease; 
-          
+
+            border-radius: 50px;
+            transition: width 0.3s ease;
+
           }
-      
+
           .link.active::after {
-            width: 100%; /* Полоска растягивается на всю ширину элемента при активном состоянии */
+            width: 100%;
           }
-      
+
           .link.active {
             background: linear-gradient(92.09deg, #5E3928 -79.4%, #E4A16F 84.12%);
-            /* Градиентный фон для текста при активном состоянии */
-            -webkit-background-clip: text; /* Применение градиента к тексту */
-            -webkit-text-fill-color: transparent; /* Прозрачный цвет текста */
-            color: #58A9A5; /* Цвет текста при активном состоянии */
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #58A9A5;
             font-weight: 500;
           }
         }
@@ -141,6 +143,7 @@ a {
           left: 640px;
           width: 8%;
         }
+
       }
 
       h1 {
@@ -152,14 +155,14 @@ a {
         text-transform: uppercase;
         line-height: 74.9px;
         position: relative;
-        /* Для позиционирования псевдоэлемента */
+
       }
 
       h1::after {
         content: "";
         display: block;
         width: 480px;
-        /* Ширина границы */
+
         height: 1px;
 
         background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
@@ -214,12 +217,39 @@ a {
         height: 40px;
         margin-block: 30px 0;
         background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
-        /* font-family: Mont; */
         font-size: 15px;
         font-weight: 600;
         line-height: 17.35px;
         text-align: center;
         color: white;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        outline: none;
+        transition: color 0.4s ease;
+      }
+
+      button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transition: transform 0.6s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+        z-index: 0;
+      }
+
+      button:hover::before {
+        transform: scaleX(1);
+      }
+
+      button:hover {
+        color: #ffffff;
       }
 
       .colors {
@@ -287,13 +317,26 @@ a {
     width: 100%;
     gap: 20px;
     padding-block: 40px 0;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      background: rgba(0, 238, 255, 0.397);
+      width: 350px;
+      height: 120px;
+     bottom: 0px;
+     left: 105px;
+     box-shadow: 0 0 60px rgba(0, 238, 255, 0.589);
+    }
 
     .item {
+    
+
       box-shadow: 0 0 50px rgba(20, 128, 216, 0.068);
       border-radius: 5px;
       width: 350px;
       height: 400px;
-      background-image: url('/img/image\ 12.png');
+      /* background-image: url('/img/image\ 12.png'); */
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -301,9 +344,12 @@ a {
       justify-content: center;
       align-items: end;
       padding-bottom: 20px;
-
+      position: relative;
+      
 
       span {
+        position: absolute;
+z-index: 11;
         /* font-family: Mont; */
         font-size: 22px;
         font-weight: 400;
@@ -312,7 +358,10 @@ a {
         color: #FFFFFF;
         width: 230px;
       }
+   
+
     }
+  
   }
 }
 
@@ -1140,7 +1189,8 @@ a {
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 0px 30px;
+      padding-inline: 60px 0;
 
       .choose-item {
         width: 270px;
@@ -1148,11 +1198,19 @@ a {
         padding-block: 30px 0;
         margin-block: 20px;
 
-        img {
-          width: 60px;
-          height: 60px;
+        .gradient {
+          width: 57px;
+          height: 57px;
           border-radius: 3px;
+          background: linear-gradient(278.32deg, #0B3F37 -7.03%, #CB8D62 136.33%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          animation: gradientShift 10s ease infinite;
 
+          img {
+            width: 35px;
+          }
         }
 
         p {
@@ -1172,6 +1230,12 @@ a {
           line-height: 18.82px;
           text-align: left;
           color: #031412;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          /* Ограничивает количество строк */
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         .read {
@@ -1307,5 +1371,31 @@ footer {
         }
       }
     }
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(278.32deg, #0B3F37 -7.03%, #CB8D62 136.33%);
+  }
+
+  20% {
+    background: linear-gradient(278.32deg, #cb6262 -7.03%, #F4A261 136.33%);
+  }
+
+  40% {
+    background: linear-gradient(278.32deg, #ff2ee3 -7.03%, #2A9D8F 136.33%);
+  }
+
+  60% {
+    background: linear-gradient(278.32deg, #2A9D8F -7.03%, #E76F51 136.33%);
+  }
+
+  80% {
+    background: linear-gradient(278.32deg, #c52c46 -7.03%, #F4A261 136.33%);
+  }
+
+  100% {
+    background: linear-gradient(278.32deg, #0B3F37 -7.03%, #CB8D62 136.33%);
   }
 }

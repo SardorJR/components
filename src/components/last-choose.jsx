@@ -6,7 +6,9 @@ function Choose({ item }) {
    
     return (
         <div className="choose-item">
-            <img src="/img/1.1.png" alt="" />
+            <div className="gradient">
+            <img src={item.img} alt="" />
+            </div>
             <p>{item.title}</p>
             <h4>{item.description}</h4>
             <div className="read">

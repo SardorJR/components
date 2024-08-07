@@ -5,7 +5,7 @@ function PeopleThink() {
     return (
 
         <div className="elem">
-        <div className="img">
+        <div className="img" >
           <img src="/img/Mask Group (11).png" alt="" />
           <img className="kov" src="/img/Union (1).png" alt="" />
         </div>
