@@ -318,16 +318,7 @@ a {
     gap: 20px;
     padding-block: 40px 0;
     position: relative;
-    &::after{
-      content: '';
-      position: absolute;
-      background: rgba(0, 238, 255, 0.397);
-      width: 350px;
-      height: 120px;
-     bottom: 0px;
-     left: 105px;
-     box-shadow: 0 0 60px rgba(0, 238, 255, 0.589);
-    }
+ 
 
     .item {
     
